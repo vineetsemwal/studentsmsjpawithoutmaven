@@ -7,11 +7,13 @@
 	<persistence-unit name="schoolms" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/empms" />
-			<property name="javax.persistence.jdbc.user" value="bharat" />
-			<property name="javax.persistence.jdbc.password" value="scooby" />
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-			<property name="hibernate.hbm2ddl.auto" value="create"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+			<property name="javax.persistence.jdbc.user" value="system" />
+			<property name="javax.persistence.jdbc.password" value="oracle" />
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
+			<property name="hibernate.hbm2ddl.auto" value="create"></property>
+			<property name="hibernate.show_sql" value="false"/>
+			<property name="hibernate.format_sql" value="false"/>
 		</properties>
 	</persistence-unit>
 </persistence>
